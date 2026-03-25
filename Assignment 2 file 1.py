@@ -461,3 +461,7 @@ def main():
             confirm = input("  Loading will replace current data. Continue? (y/n): ").strip().lower()
             if confirm == "y":
                 manager.students = load_from_file()
+
+        # ---- 10. EXPORT REPORT ----
+        elif choice == "10":
+            export_report(manager.students)
