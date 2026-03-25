@@ -167,3 +167,28 @@ class StudentManager:
                 setattr(s, field, new_value)
                 return True
         return False
+
+    # ---------- DELETE ----------
+    def delete_student(self, student_id):
+         
+         for s in self.students:
+            if s.student_id == student_id:
+                self.students.remove(s)
+                return True
+         return False
+
+    # ---------- ANALYSE ----------
+    def analyse(self):
+         
+         if not self.students:
+            print("  No data to analyse.")
+            return
+
+        scores = [s.score for s in self.students]
+        avg    = sum(scores) / len(scores)
+        high   = max(scores)
+        low    = min(scores)
+    
+        grades = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
+        for s in self.students:
+            grades[s.get_grade()] += 1
