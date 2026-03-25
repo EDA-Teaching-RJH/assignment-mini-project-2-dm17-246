@@ -421,3 +421,10 @@ def main():
 
                 else:
                     print("  Invalid choice.")
+
+        # ---- 5. DELETE ----
+        elif choice == "5":
+            print("\n  -- Delete Student -- ")
+            sid = input("  Enter Student ID to delete: ").strip()
+            confirm = input(f"  Are you sure you want to delete '{sid}'? (y/n): ").strip().lower()
+            
