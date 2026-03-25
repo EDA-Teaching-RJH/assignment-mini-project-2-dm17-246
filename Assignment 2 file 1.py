@@ -455,3 +455,9 @@ def main():
         # ---- 8. SAVE ----
         elif choice == "8":
             save_to_file(manager.students)
+
+        # ---- 9. LOAD ----
+        elif choice == "9":
+            confirm = input("  Loading will replace current data. Continue? (y/n): ").strip().lower()
+            if confirm == "y":
+                manager.students = load_from_file()
