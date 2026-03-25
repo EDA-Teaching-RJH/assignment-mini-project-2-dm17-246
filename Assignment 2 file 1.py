@@ -281,3 +281,6 @@ def run_tests():
     check("Search by name starting with A returns 1 result",  len(results) == 1)
     results = mgr2.search_students("email", r"@gmail\.com$")
     check("Search emails ending in @gmail.com returns 2",     len(results) == 2)
+
+    print(f"\n  Results: {passed} passed, {failed} failed.")
+    print("====================================\n")
