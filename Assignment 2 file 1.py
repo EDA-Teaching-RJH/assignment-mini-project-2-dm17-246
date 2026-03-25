@@ -17,3 +17,7 @@ def validate_email(email):
 def validate_student_id(student_id):
     pattern = r'^[A-Za-z]\d{5}$'
     return bool(re.match(pattern, student_id))
+
+def validate_name(name):
+    pattern = r'^[A-Za-z\s]+$'
+    return bool(re.match(pattern, name.strip()))
