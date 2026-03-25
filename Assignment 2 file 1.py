@@ -68,3 +68,24 @@ def load_from_file():
 
     print(f"  Loaded {len(loaded)} student(s) from '{FILE_NAME}'.")
     return loaded
+
+def export_report(student_list):
+    report_file = "report.txt"
+    with open(report_file, "w") as f:
+        f.write("===== STUDENT PERFORMANCE REPORT =====\n\n")
+        if not student_list:
+            f.write("No students on record.\n")
+        else:
+            for s in student_list:
+                f.write(f"Name:       {s.name}\n")
+                f.write(f"Email:      {s.email}\n")
+                f.write(f"Student ID: {s.student_id}\n")
+                f.write(f"Score:      {s.score}  |  Grade: {s.get_grade()}\n")
+                f.write("-" * 40 + "\n")
+
+            scores = [s.score for s in student_list]
+            f.write(f"\nAverage Score: {sum(scores) / len(scores):.1f}\n")
+            f.write(f"Highest Score: {max(scores)}\n")
+            f.write(f"Lowest Score:  {min(scores)}\n")
+
+    print(f"  Report exported to '{report_file}'.")
