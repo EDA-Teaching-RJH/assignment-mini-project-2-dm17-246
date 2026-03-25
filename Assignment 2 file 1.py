@@ -394,3 +394,11 @@ def main():
             else:
                 print("  Edit: (1) Name  (2) Email  (3) Score")
                 edit_choice = input("  Choose field to edit;").strip
+
+                if edit_choice == "1":
+                    new_val = get_validated_input(
+                        "New name: ", validate_name,
+                        "Name must only contain letters and spaces."
+                    )
+                    manager.edit_student(sid, "name", new_val)
+                    print("  Name updated.")
