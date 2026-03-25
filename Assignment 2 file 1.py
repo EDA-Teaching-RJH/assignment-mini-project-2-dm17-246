@@ -402,3 +402,12 @@ def main():
                     )
                     manager.edit_student(sid, "name", new_val)
                     print("  Name updated.")
+
+                elif edit_choice == "2":
+                    new_val = get_validate_input(
+                        "  New email: ", validate_email,
+                        "Pleasae enter a valid email.
+                    )
+                    manager.edit_student(sid, "email", new_val)
+                    print("  Email updated.")
+                    
