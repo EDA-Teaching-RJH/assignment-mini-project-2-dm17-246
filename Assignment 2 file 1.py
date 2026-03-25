@@ -30,3 +30,7 @@ def validate_score(score_str):
         return None
     except ValueError:
         return None
+
+# ==========================================
+# 3. FILE I/O FUNCTIONS
+# ==========================================
