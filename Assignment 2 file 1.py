@@ -330,8 +330,23 @@ def main():
         if choice == "1":
             print("\n  -- Add Student --")
 
-            name = get validated_input(
+            name = get_validated_input(
                 "  Name: ",
                 validate_name,
                 "Name must only contain letters and spaces."
             )
+
+            email = get_validated_input(
+                "  Email: ",
+                validate_name,
+                "Please enter a valid eamil (e.g. jphn@example.com)"
+            )
+
+            while True:
+                sid = input("  Student ID (e.g. S98765): ").strip() 
+                if not validate_student_id(sid):
+                    print("  Error: ID must be one letter followed by 5 digits (e.g. S98765).")
+                elif manager.id_exists(sid):
+                    print("  Error: That Student ID already exists. IDs must be unique.")
+                else:
+                    break
