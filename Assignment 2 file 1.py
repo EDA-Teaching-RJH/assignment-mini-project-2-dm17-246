@@ -98,11 +98,11 @@ def export_report(student_list):
 
 class Person:
 
-def __init__(self, name, email):
+    def __init__(self, name, email):
         self.name  = name
         self.email = email
 
-def get_details(self):
+    def get_details(self):
     return f"Name: {self.name} | Email: {self.email}"
 
 class Student(Person):
@@ -112,7 +112,7 @@ class Student(Person):
         self.student_id = student_id
         self.score      = score
 
-def get_grade(self):
+    def get_grade(self):
     
     if self.score >= 70:
             return "A"
@@ -125,7 +125,7 @@ def get_grade(self):
         else:
             return "F"
 
-def get_details(self):
+    def get_details(self):
     
     base = super().get_details()
     return f"{base} | ID: {self.student_id} | Score: {self.score} | Grade: {self.get_grade()}"
@@ -137,7 +137,7 @@ class StudentManager:
 
     # ---------- ADD ----------
     def add_student(self, name, email, student_id, score):
-        elf.students.append(Student(name, email, student_id, score))
+        self.students.append(Student(name, email, student_id, score))
         print(f"  Student '{name}' added successfully.")
 
     # ---------- VIEW ----------
@@ -389,7 +389,7 @@ def main():
             print("\n -- Edit Student --")
             sid = input("  Enter Student ID to edit: ").strip
             
-            if not manager.id exists(sid):
+            if not manager.id_exists(sid):
                 print("  Error: Student ID not found.")
             else:
                 print("  Edit: (1) Name  (2) Email  (3) Score")
