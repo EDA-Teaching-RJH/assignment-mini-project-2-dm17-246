@@ -284,3 +284,7 @@ def run_tests():
 
     print(f"\n  Results: {passed} passed, {failed} failed.")
     print("====================================\n")
+
+# ==========================================
+# 6. HELPER: COLLECT INPUT WITH VALIDATION
+# ==========================================
