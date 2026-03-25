@@ -103,7 +103,7 @@ class Person:
         self.email = email
 
     def get_details(self):
-    return f"Name: {self.name} | Email: {self.email}"
+        return f"Name: {self.name} | Email: {self.email}"
 
 class Student(Person):
 
@@ -114,7 +114,7 @@ class Student(Person):
 
     def get_grade(self):
     
-    if self.score >= 70:
+        if self.score >= 70:
             return "A"
         elif self.score >= 60:
             return "B"
@@ -127,8 +127,8 @@ class Student(Person):
 
     def get_details(self):
     
-    base = super().get_details()
-    return f"{base} | ID: {self.student_id} | Score: {self.score} | Grade: {self.get_grade()}"
+        base = super().get_details()
+        return f"{base} | ID: {self.student_id} | Score: {self.score} | Grade: {self.get_grade()}"
 
 
 class StudentManager:
@@ -374,7 +374,7 @@ def main():
                 print("  Invalid choice.")
             else:
                 field   = field_map[field_choice]
-                pattern = input("  Enter search pattern (supports regex): ").strip()
+                pattern = input("  Enter search pattern: ").strip()
                 results = manager.search_students(field, pattern)
 
                 if results:
