@@ -180,7 +180,7 @@ class StudentManager:
     # ---------- ANALYSE ----------
     def analyse(self):
          
-         if not self.students:
+        if not self.students:
             print("  No data to analyse.")
             return
 
@@ -214,3 +214,7 @@ class StudentManager:
      # ---------- DUPLICATE CHECK ----------
     def id_exists(self, student_id):
         return any(s.student_id == student_id for s in self.students)
+    
+# ==========================================
+# 5. TESTING FUNCTIONS
+# ==========================================
