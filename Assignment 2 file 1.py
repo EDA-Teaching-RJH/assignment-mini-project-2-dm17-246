@@ -139,3 +139,12 @@ class StudentManager:
     def add_student(self, name, email, student_id, score):
         elf.students.append(Student(name, email, student_id, score))
         print(f"  Student '{name}' added successfully.")
+
+# ---------- VIEW ----------
+    def view_all(self):
+        if not self.students:
+            print("  No students on record.")
+            return
+        print("\n  --- All Students ---")
+        for i, s in enumerate(self.students, start=1):
+            print(f"  {i}. {s.get_details()}")
