@@ -442,7 +442,7 @@ def main():
         
         # ---- 7. SORT ----
         elif choice == "7":
-            print("\n  Sort order: (1) Highest first  (2) Lowes first")
+            print("\n  Sort order: (1) Highest first  (2) Lowest first")
             sort_choice = input("  Choose: ").strip()
             if sort_choice == "1":
                 manager.sort_by_score(descending=True)

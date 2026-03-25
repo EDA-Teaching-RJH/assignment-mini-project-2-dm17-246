@@ -1,0 +1,16 @@
+===== STUDENT PERFORMANCE REPORT =====
+
+Name:       dom
+Email:      dom@gmail.com
+Student ID: S12345
+Score:      100  |  Grade: A
+----------------------------------------
+Name:       lili
+Email:      lc@cardiff.ac.uk
+Student ID: S09876
+Score:      93  |  Grade: A
+----------------------------------------
+
+Average Score: 96.5
+Highest Score: 100
+Lowest Score:  93
