@@ -370,4 +370,9 @@ def main():
             field_choice = input("  Choose field: ").strip()
             field_map = {"1": "name", "2": "email", "3": "student_id"}
 
-            
+            if field_choice not in field_map:
+                print("  Invalid choice.")
+            else:
+                field   = field_map[field_choice]
+                pattern = input("  Enter search pattern (supports regex): ").strip()
+                results = manager.search_students(field, pattern)
