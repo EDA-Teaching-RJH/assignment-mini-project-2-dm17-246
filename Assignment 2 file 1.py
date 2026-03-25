@@ -413,7 +413,7 @@ def main():
                     
                 elif edit_choice == "3":
                     new_val = get_validated_input(
-                        "  New score (0-100):" ",validate_score,
+                        "  New score (0-100): ", validate_score,
                         "Score must be a whole number between 0 and 100."
                     )
                     manager.edit_student(sid, "score", new_val)
