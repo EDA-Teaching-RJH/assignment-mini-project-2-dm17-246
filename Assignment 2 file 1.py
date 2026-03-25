@@ -430,3 +430,8 @@ def main():
             if confirm == "y":
                 if manager.delete_student(sid):
                     print("  Student deleted.")
+                else:
+                    print("  Error: Student ID not found.")
+
+            else: 
+                print("  Delete cancelled.")
