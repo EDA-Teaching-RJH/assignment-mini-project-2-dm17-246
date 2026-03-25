@@ -288,3 +288,11 @@ def run_tests():
 # ==========================================
 # 6. HELPER: COLLECT INPUT WITH VALIDATION
 # ==========================================
+
+def get_validated_input(prompt, validator, error_message):
+    while True:
+        value = input(prompt).strip()
+        result = validator(value)
+        if result or result == 0:     # Allow 0 as a valid score
+            return result if not isinstance(result, bool) else value
+        print(f"  Error: {error_message}")
