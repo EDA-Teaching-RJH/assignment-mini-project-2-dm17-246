@@ -435,3 +435,8 @@ def main():
 
             else: 
                 print("  Delete cancelled.")
+
+        # ---- 6. ANALYSE ----
+        elif choice == "6":
+            manager.analyse()
+            
