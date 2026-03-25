@@ -427,4 +427,6 @@ def main():
             print("\n  -- Delete Student -- ")
             sid = input("  Enter Student ID to delete: ").strip()
             confirm = input(f"  Are you sure you want to delete '{sid}'? (y/n): ").strip().lower()
-            
+            if confirm == "y":
+                if manager.delete_student(sid):
+                    print("  Student deleted.")
