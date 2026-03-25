@@ -109,3 +109,16 @@ class Student(Person):
         super().__init__(name, email)          # Calls Person.__init__ to set name + email
         self.student_id = student_id
         self.score      = score
+
+def get_grade(self):
+    
+    if self.score >= 70:
+            return "A"
+        elif self.score >= 60:
+            return "B"
+        elif self.score >= 50:
+            return "C"
+        elif self.score >= 40:
+            return "D"
+        else:
+            return "F"
