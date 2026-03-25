@@ -5,3 +5,7 @@
 import re
 import csv
 import os
+
+# ==========================================
+# 2. REGEX VALIDATION FUNCTIONS
+# ==========================================
