@@ -451,3 +451,7 @@ def main():
                 print("  Sorted lowest to highest.")
             else:
                 print("  Invalid choice.")
+
+        # ---- 8. SAVE ----
+        elif choice == "8":
+            save_to_file(manager.students)
