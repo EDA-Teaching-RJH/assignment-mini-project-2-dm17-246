@@ -358,3 +358,8 @@ def main():
             )
 
             manager.add_student(name, email, sid, score)
+
+        # ---- 2. VIEW ALL STUDENTS ----
+        elif choice == "2":
+            manager.view_all()
+            
