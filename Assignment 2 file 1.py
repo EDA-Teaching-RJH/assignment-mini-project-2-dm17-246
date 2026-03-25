@@ -2,6 +2,8 @@
 # 1. IMPORTS & LIBRARIES
 # ==========================================
 
+from email.mime import base
+from email.mime import base
 import re
 import csv
 import os
@@ -125,5 +127,10 @@ def get_grade(self):
 
 def get_details(self):
     
-     base = super().get_details()
-        return f"{base} | ID: {self.student_id} | Score: {self.score} | Grade: {self.get_grade()}"
+    base = super().get_details()
+    return f"{base} | ID: {self.student_id} | Score: {self.score} | Grade: {self.get_grade()}"
+
+
+class StudentManager:
+    def __init__(self):
+        self.students = []    
