@@ -404,9 +404,9 @@ def main():
                     print("  Name updated.")
 
                 elif edit_choice == "2":
-                    new_val = get_validate_input(
+                    new_val = get_validated_input(
                         "  New email: ", validate_email,
-                        "Pleasae enter a valid email.
+                        "Please enter a valid email."
                     )
                     manager.edit_student(sid, "email", new_val)
                     print("  Email updated.")
@@ -443,6 +443,7 @@ def main():
         # ---- 7. SORT ----
         elif choice == "7":
             print("\n  Sort order: (1) Highest first  (2) Lowes first")
+            sort_choice = input("  Choose: ").strip()
             if sort_choice == "1":
                 manager.sort_by_score(descending=True)
                 print("  Sorted highest to lowest.")
