@@ -122,3 +122,8 @@ def get_grade(self):
             return "D"
         else:
             return "F"
+
+def get_details(self):
+    
+     base = super().get_details()
+        return f"{base} | ID: {self.student_id} | Score: {self.score} | Grade: {self.get_grade()}"
