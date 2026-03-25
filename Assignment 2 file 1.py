@@ -253,3 +253,11 @@ def run_tests():
     # --- Name validation tests ---
     check("Valid name accepted",              validate_name("Alice Smith"))
     check("Name with numbers rejected",       not validate_name("Alice123"))
+
+    # --- Grade classification tests ---
+    s = Student("Test", "test@test.com", "T00001", 75)
+    check("Score 75 gives grade A",           s.get_grade() == "A")
+    s.score = 55
+    check("Score 55 gives grade C",           s.get_grade() == "C")
+    s.score = 30
+    check("Score 30 gives grade F",           s.get_grade() == "F")
