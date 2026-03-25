@@ -2,8 +2,6 @@
 # 1. IMPORTS & LIBRARIES
 # ==========================================
 
-from email.mime import base
-from email.mime import base
 import re
 import csv
 import os
