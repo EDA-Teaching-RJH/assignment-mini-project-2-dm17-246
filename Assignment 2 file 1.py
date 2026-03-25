@@ -362,4 +362,12 @@ def main():
         # ---- 2. VIEW ALL STUDENTS ----
         elif choice == "2":
             manager.view_all()
+
+        # ---- 3. SEARCH ----
+        elif choice == "3":
+            print("\n  -- Search Students --")    
+            print("  Search by: (1) Name  (2) Email  (3) Student ID")
+            field_choice = input("  Choose field: ").strip()
+            field_map = {"1": "name", "2": "email", "3": "student_id"}
+
             
