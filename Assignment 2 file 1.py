@@ -272,3 +272,12 @@ def run_tests():
     check("Student count after delete",       len(mgr.students) == 1)
     check("Edit student score works",         mgr.edit_student("A00001", "score", 90) and mgr.students[0].score == 90)
 
+     # --- Regex search tests ---
+    mgr2 = StudentManager()
+    mgr2.add_student("Alice",   "alice@gmail.com",   "A11111", 70)
+    mgr2.add_student("Bob",     "bob@outlook.com",   "B22222", 60)
+    mgr2.add_student("Charlie", "charlie@gmail.com", "C33333", 50)
+    results = mgr2.search_students("name", r"^A")
+    check("Search by name starting with A returns 1 result",  len(results) == 1)
+    results = mgr2.search_students("email", r"@gmail\.com$")
+    check("Search emails ending in @gmail.com returns 2",     len(results) == 2)
