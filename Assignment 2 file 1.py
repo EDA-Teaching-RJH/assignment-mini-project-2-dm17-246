@@ -89,3 +89,16 @@ def export_report(student_list):
             f.write(f"Lowest Score:  {min(scores)}\n")
 
     print(f"  Report exported to '{report_file}'.")
+
+# ==========================================
+# 4. CLASS DEFINITIONS (OOP)
+# ==========================================
+
+class Person:
+
+def __init__(self, name, email):
+        self.name  = name
+        self.email = email
+
+def get_details(self):
+    return f"Name: {self.name} | Email: {self.email}"
