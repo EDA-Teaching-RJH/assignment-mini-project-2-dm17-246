@@ -323,3 +323,15 @@ def main():
         print(" 10. Export Report")
         print(" 11. Run Tests")
         print("  0. Exit")
+
+        choice = input("\n  Enter choice: ").strip()
+
+        # ---- 1. ADD STUDENT ----
+        if choice == "1":
+            print("\n  -- Add Student --")
+
+            name = get validated_input(
+                "  Name: ",
+                validate_name,
+                "Name must only contain letters and spaces."
+            )
