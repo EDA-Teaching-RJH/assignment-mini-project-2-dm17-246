@@ -192,3 +192,25 @@ class StudentManager:
         grades = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
         for s in self.students:
             grades[s.get_grade()] += 1
+
+        failing = [s for s in self.students if s.get_grade() == "F"]
+
+        print("\n  --- Analysis ---")
+        print(f"  Total Students : {len(self.students)}")
+        print(f"  Average Score  : {avg:.1f}")
+        print(f"  Highest Score  : {high}")
+        print(f"  Lowest Score   : {low}")
+        print(f"  Grade Breakdown: {grades}")
+        if failing:
+            print("  Failing Students:")
+            for s in failing:
+                print(f"    - {s.name} (ID: {s.student_id}, Score: {s.score})")
+
+    # ---------- SORT ----------
+    def sort_by_score(self, descending=True):
+
+        self.students.sort(key=lambda s: s.score, reverse=descending)
+
+     # ---------- DUPLICATE CHECK ----------
+    def id_exists(self, student_id):
+        return any(s.student_id == student_id for s in self.students)
