@@ -469,3 +469,8 @@ def main():
         # ---- 11. RUN TESTS ----
         elif choice == "11":
             run_tests()
+
+        # ---- 0. EXIT ----
+        elif choice == "0":
+            print("\n  Goodbye!")
+            break
