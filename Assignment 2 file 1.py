@@ -135,12 +135,12 @@ class StudentManager:
     def __init__(self):
         self.students = []    # The master in-memory list of Student objects
 
- # ---------- ADD ----------
+    # ---------- ADD ----------
     def add_student(self, name, email, student_id, score):
         elf.students.append(Student(name, email, student_id, score))
         print(f"  Student '{name}' added successfully.")
 
-# ---------- VIEW ----------
+    # ---------- VIEW ----------
     def view_all(self):
         if not self.students:
             print("  No students on record.")
@@ -148,3 +148,22 @@ class StudentManager:
         print("\n  --- All Students ---")
         for i, s in enumerate(self.students, start=1):
             print(f"  {i}. {s.get_details()}")
+
+    # ---------- SEARCH ----------
+    def search_students(self, field, pattern):
+            
+        results = []
+        for s in self.students:
+            target = getattr(s, field)       # Dynamically pick the right attribute
+            if re.search(pattern, target, re.IGNORECASE):
+                results.append(s)
+        return results
+    
+    # ---------- EDIT ----------
+    def edit_student(self, student_id, field, new_value):
+         
+        for s in self.students:
+            if s.student_id == student_id:
+                setattr(s, field, new_value)
+                return True
+        return False
