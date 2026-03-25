@@ -224,3 +224,16 @@ def run_tests():
     passed = 0
     failed= 0
 
+    def check(description, condition):
+        nonlocal passed, failed
+        if condition:
+            print(f"  [PASS]{description}")
+            passed += 1
+        else:
+            print(f"  [FAIL]{description}")
+            failed += 1
+
+    # --- Email validation tests ---
+    check("Valid email accepted",             validate_email("john@example.com"))
+    check("Email without @ rejected",         not validate_email("johnexample.com"))
+    check("Email without domain rejected",    not validate_email("john@"))
