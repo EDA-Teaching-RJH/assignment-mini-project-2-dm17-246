@@ -474,3 +474,9 @@ def main():
         elif choice == "0":
             print("\n  Goodbye!")
             break
+
+        else:
+            print("  Invalid choice. Please enter a number from the menu.")
+
+if __name__ == "__main__":
+    main()       
