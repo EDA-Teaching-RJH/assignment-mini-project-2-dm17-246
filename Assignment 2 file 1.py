@@ -376,3 +376,10 @@ def main():
                 field   = field_map[field_choice]
                 pattern = input("  Enter search pattern (supports regex): ").strip()
                 results = manager.search_students(field, pattern)
+
+                if results:
+                    print(f"\n  Found {len(results)} result(s):")
+                    for s in results:
+                        print(f"    {s.get_details()}")
+                else:
+                    print("   No matches found.")
