@@ -261,3 +261,14 @@ def run_tests():
     check("Score 55 gives grade C",           s.get_grade() == "C")
     s.score = 30
     check("Score 30 gives grade F",           s.get_grade() == "F")
+
+     # --- StudentManager tests ---
+    mgr = StudentManager()
+    mgr.add_student("Alice", "alice@test.com", "A00001", 85)
+    mgr.add_student("Bob",   "bob@test.com",   "B00002", 45)
+    check("Add student works",                len(mgr.students) == 2)
+    check("Duplicate ID detected",            mgr.id_exists("A00001"))
+    check("Delete student works",             mgr.delete_student("B00002"))
+    check("Student count after delete",       len(mgr.students) == 1)
+    check("Edit student score works",         mgr.edit_student("A00001", "score", 90) and mgr.students[0].score == 90)
+
