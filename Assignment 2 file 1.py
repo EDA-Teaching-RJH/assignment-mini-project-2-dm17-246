@@ -237,3 +237,9 @@ def run_tests():
     check("Valid email accepted",             validate_email("john@example.com"))
     check("Email without @ rejected",         not validate_email("johnexample.com"))
     check("Email without domain rejected",    not validate_email("john@"))
+
+    # --- Student ID validation tests ---
+    check("Valid student ID accepted",        validate_student_id("S12345"))
+    check("ID with no letter rejected",       not validate_student_id("123456"))
+    check("ID that is too short rejected",    not validate_student_id("S1234"))
+    check("ID with two letters rejected",     not validate_student_id("SA1234"))
