@@ -243,3 +243,9 @@ def run_tests():
     check("ID with no letter rejected",       not validate_student_id("123456"))
     check("ID that is too short rejected",    not validate_student_id("S1234"))
     check("ID with two letters rejected",     not validate_student_id("SA1234"))
+
+    # --- Score validation tests ---
+    check("Score 0 accepted",                 validate_score("0") == 0)
+    check("Score 100 accepted",               validate_score("100") == 100)
+    check("Score 101 rejected",               validate_score("101") is None)
+    check("Non-numeric score rejected",       validate_score("abc") is None)
