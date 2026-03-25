@@ -133,4 +133,9 @@ def get_details(self):
 
 class StudentManager:
     def __init__(self):
-        self.students = []    
+        self.students = []    # The master in-memory list of Student objects
+
+ # ---------- ADD ----------
+    def add_student(self, name, email, student_id, score):
+        elf.students.append(Student(name, email, student_id, score))
+        print(f"  Student '{name}' added successfully.")
