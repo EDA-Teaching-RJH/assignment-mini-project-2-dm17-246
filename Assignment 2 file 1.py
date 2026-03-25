@@ -465,3 +465,7 @@ def main():
         # ---- 10. EXPORT REPORT ----
         elif choice == "10":
             export_report(manager.students)
+
+        # ---- 11. RUN TESTS ----
+        elif choice == "11":
+            run_tests()
