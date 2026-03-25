@@ -383,3 +383,14 @@ def main():
                         print(f"    {s.get_details()}")
                 else:
                     print("   No matches found.")
+
+        # ---- 4. EDIT ----
+        elif choice == "4":
+            print("\n -- Edit Student --")
+            sid = input("  Enter Student ID to edit: ").strip
+            
+            if not manager.id exists(sid):
+                print("  Error: Student ID not found.")
+            else:
+                print("  Edit: (1) Name  (2) Email  (3) Score")
+                edit_choice = input("  Choose field to edit;").strip
