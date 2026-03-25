@@ -300,3 +300,11 @@ def get_validated_input(prompt, validator, error_message):
 # ==========================================
 # 7. MAIN PROGRAM (USER INTERFACE)
 # ==========================================
+
+def main():
+    print("=" * 45)
+    print("  Student Coursework Management System")
+    print("=" * 45)
+
+    manager = StudentManager()
+
