@@ -249,3 +249,7 @@ def run_tests():
     check("Score 100 accepted",               validate_score("100") == 100)
     check("Score 101 rejected",               validate_score("101") is None)
     check("Non-numeric score rejected",       validate_score("abc") is None)
+
+    # --- Name validation tests ---
+    check("Valid name accepted",              validate_name("Alice Smith"))
+    check("Name with numbers rejected",       not validate_name("Alice123"))
