@@ -102,3 +102,10 @@ def __init__(self, name, email):
 
 def get_details(self):
     return f"Name: {self.name} | Email: {self.email}"
+
+class Student(Person):
+
+    def __init__(self, name, email, student_id, score):
+        super().__init__(name, email)          # Calls Person.__init__ to set name + email
+        self.student_id = student_id
+        self.score      = score
