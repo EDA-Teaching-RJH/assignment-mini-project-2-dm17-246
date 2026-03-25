@@ -37,3 +37,34 @@ def validate_score(score_str):
 
 FILE_NAME = "students.csv"
 CSV_HEADERS = ["name", "email", "student_id", "score"]
+
+def save_to_file(student_list):
+    with open(FILE_NAME, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
+        writer.writeheader()
+        for student in student_list:
+            writer.writerow({
+                "name":       student.name,
+                "email":      student.email,
+                "student_id": student.student_id,
+                "score":      student.score
+            })
+    print(f"  Data saved to '{FILE_NAME}'.")
+
+def load_from_file():
+    loaded = []
+    if not os.path.exists(FILE_NAME):
+        print(f"  No file named '{FILE_NAME}' found. Starting with empty records.")
+        return loaded
+
+    with open(FILE_NAME, "r", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            score = validate_score(row["score"])
+            if score is None:
+                print(f"  Warning: skipped row with invalid score: {row}")
+                continue
+            loaded.append(Student(row["name"], row["email"], row["student_id"], score))
+
+    print(f"  Loaded {len(loaded)} student(s) from '{FILE_NAME}'.")
+    return loaded
