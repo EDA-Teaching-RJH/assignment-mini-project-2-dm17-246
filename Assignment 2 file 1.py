@@ -218,3 +218,9 @@ class StudentManager:
 # ==========================================
 # 5. TESTING FUNCTIONS
 # ==========================================
+
+def run_tests():
+    print("\n========== RUNNING TESTS ==========")
+    passed = 0
+    failed= 0
+
