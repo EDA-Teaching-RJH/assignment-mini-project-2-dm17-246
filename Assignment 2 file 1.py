@@ -34,3 +34,6 @@ def validate_score(score_str):
 # ==========================================
 # 3. FILE I/O FUNCTIONS
 # ==========================================
+
+FILE_NAME = "students.csv"
+CSV_HEADERS = ["name", "email", "student_id", "score"]
