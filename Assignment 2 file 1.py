@@ -9,3 +9,8 @@ import os
 # ==========================================
 # 2. REGEX VALIDATION FUNCTIONS
 # ==========================================
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w{2,}$'
+    return bool(re.match(pattern, email))
+
