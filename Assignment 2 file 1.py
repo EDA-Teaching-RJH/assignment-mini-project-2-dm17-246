@@ -308,3 +308,18 @@ def main():
 
     manager = StudentManager()
 
+    while True:
+        print("\n  Main Menu")
+        print("  ---------")
+        print("  1. Add Student")
+        print("  2. View All Students")
+        print("  3. Search Students")
+        print("  4. Edit Student")
+        print("  5. Delete Student")
+        print("  6. Analyse Data")
+        print("  7. Sort by Score")
+        print("  8. Save Data")
+        print("  9. Load Data")
+        print(" 10. Export Report")
+        print(" 11. Run Tests")
+        print("  0. Exit")
