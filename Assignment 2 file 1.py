@@ -296,3 +296,7 @@ def get_validated_input(prompt, validator, error_message):
         if result or result == 0:     # Allow 0 as a valid score
             return result if not isinstance(result, bool) else value
         print(f"  Error: {error_message}")
+
+# ==========================================
+# 7. MAIN PROGRAM (USER INTERFACE)
+# ==========================================
