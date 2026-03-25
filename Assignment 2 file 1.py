@@ -439,4 +439,15 @@ def main():
         # ---- 6. ANALYSE ----
         elif choice == "6":
             manager.analyse()
-            
+        
+        # ---- 7. SORT ----
+        elif choice == "7":
+            print("\n  Sort order: (1) Highest first  (2) Lowes first")
+            if sort_choice == "1":
+                manager.sort_by_score(descending=True)
+                print("  Sorted highest to lowest.")
+            elif sort_choice == "2":
+                manager.sort_by_score(descending=False)
+                print("  Sorted lowest to highest.")
+            else:
+                print("  Invalid choice.")
