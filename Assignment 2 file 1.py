@@ -350,3 +350,11 @@ def main():
                     print("  Error: That Student ID already exists. IDs must be unique.")
                 else:
                     break
+
+            score = get_validated_input(
+                "  Score (0-100): ",
+                validate_score,
+                "Score must be a whole number between 0 and 100."
+            )
+
+            manager.add_student(name, email, sid, score)
