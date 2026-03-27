@@ -8,7 +8,7 @@ In Lecture 9, we learned about file I/O. Specifically, how to use the “with”
 
 Earlier Lectures
 
-A few of the earlier lectures also fed into this project. The get_grade function uses the exact same if/elif statements as lecture 3 regarding degree classifications. Additionally, both the main_menu function and the _validate_input function use the while True loop discussed in lecture 4. Finally, the validate_score and load_from_file functions use try and except statements as discussed in lecture 6.
+A few of the earlier lectures also fed into this project. The get_grade function uses the exact same if/elif statements as lecture 3 regarding degree classifications. Additionally, both the main_menu function and the validate_input function use the while True loop discussed in lecture 4. Finally, the validate_score and load_from_file functions use try and except statements as discussed in lecture 6.
 
 Overall Reflection
 
