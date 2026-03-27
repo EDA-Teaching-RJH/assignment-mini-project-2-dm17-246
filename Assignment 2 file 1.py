@@ -106,7 +106,7 @@ class Person:
 class Student(Person):
 
     def __init__(self, name, email, student_id, score):
-        super().__init__(name, email)          # Calls Person.__init__ to set name + email
+        super().__init__(name, email)          
         self.student_id = student_id
         self.score      = score
 
@@ -131,7 +131,7 @@ class Student(Person):
 
 class StudentManager:
     def __init__(self):
-        self.students = []    # The master in-memory list of Student objects
+        self.students = []    
 
     # ---------- ADD ----------
     def add_student(self, name, email, student_id, score):
@@ -152,7 +152,7 @@ class StudentManager:
             
         results = []
         for s in self.students:
-            target = getattr(s, field)       # Dynamically pick the right attribute
+            target = getattr(s, field)       
             if re.search(pattern, target, re.IGNORECASE):
                 results.append(s)
         return results

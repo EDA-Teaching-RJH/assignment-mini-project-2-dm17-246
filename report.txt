@@ -1,16 +1,16 @@
 ===== STUDENT PERFORMANCE REPORT =====
 
-Name:       dom
-Email:      dom@gmail.com
+Name:       john kent
+Email:      jk@kent.ac.uk
 Student ID: S12345
-Score:      100  |  Grade: A
+Score:      23  |  Grade: F
 ----------------------------------------
-Name:       lili
-Email:      lc@cardiff.ac.uk
-Student ID: S09876
-Score:      93  |  Grade: A
+Name:       Bethany Rudd
+Email:      BRd@gmail.com
+Student ID: S13579
+Score:      67  |  Grade: B
 ----------------------------------------
 
-Average Score: 96.5
-Highest Score: 100
-Lowest Score:  93
+Average Score: 45.0
+Highest Score: 67
+Lowest Score:  23
